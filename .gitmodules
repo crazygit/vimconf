@@ -16,3 +16,6 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/vim-flake8"]
+	path = bundle/vim-flake8
+	url = git://github.com/nvie/vim-flake8.git
