@@ -1,4 +1,3 @@
-syn on                      "语法支持
 filetype plugin indent on   " 加载插件和支持缩进
 colorscheme evening         "选择夜晚主题
 
@@ -525,3 +524,4 @@ let g:flake8_ignore="E501"
 autocmd BufWritePost *.py call Flake8()
 
 map <F2> <Esc>:!python %<CR>
+syn on                      "语法支持

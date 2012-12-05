@@ -19,3 +19,12 @@
 [submodule "bundle/vim-flake8"]
 	path = bundle/vim-flake8
 	url = git://github.com/nvie/vim-flake8.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/VST"]
+	path = bundle/VST
+	url = git://github.com/vim-scripts/VST.git
+[submodule "bundle/bash-support"]
+	path = bundle/bash-support
+	url = git://github.com/vim-scripts/bash-support.vim.git
