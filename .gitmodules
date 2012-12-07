@@ -28,3 +28,6 @@
 [submodule "bundle/bash-support"]
 	path = bundle/bash-support
 	url = git://github.com/vim-scripts/bash-support.vim.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/hallison/vim-markdown.git
