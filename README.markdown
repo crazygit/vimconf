@@ -1,5 +1,5 @@
-dot vim config
-=======
+Dot vim config
+==============
 
 Installation:
 
@@ -14,6 +14,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
+
 
 Add new submodule:
 

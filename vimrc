@@ -15,7 +15,7 @@ set laststatus=2            "总是显示状态行
 set expandtab               "以下三个配置配合使用，设置tab和缩进空格数
 set shiftwidth=4
 set tabstop=4
-set cursorline              "为光标所在行加下划线
+"set cursorline              "为光标所在行加下划线
 set number                  "显示行号
 set autoread                "文件在Vim之外修改过，自动重新读入
 set ignorecase              "检索时忽略大小写
@@ -66,7 +66,7 @@ set number
 set wrap
 set textwidth=79
 set linebreak
-set showbreak=↪
+"set showbreak=↪
 set formatoptions=qrn1
 
 "if exists('+colorcolumn')
