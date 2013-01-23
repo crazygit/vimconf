@@ -263,6 +263,7 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 "When .vimrc is edited, reload it
 "定义了一个自动命令，每次写入.vimrc后，都会执行这个自动命令，source一次~/.vimrc文件
 "autocmd! bufwritepost .vimrc source ~/.vimrc
+"
 nnoremap <C-l> gt
 nnoremap <C-h> gT
 nnoremap <leader>t : tabe<CR>
@@ -286,6 +287,9 @@ nnoremap <up> <nop>
 noremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
+nnoremap dh d0
+nnoremap dl d$
+
 inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
