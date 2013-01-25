@@ -327,11 +327,14 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"从vim复制内容的时候，经常做set nonu 和set nu的操作，比较麻烦。F3快速设置显示和
+"隐藏行号
 " Toggle line numbers
-nmap <silent> <F4> :set number!<CR>
-
+nmap <silent> <F3> :set number!<CR>
+"往vim粘贴代码的时候，为了避免代码格式混乱，经常要先执行:set paste命令, 使用F4
+"一键搞定。
 " Toggle paste
-set pastetoggle=<F6>
+set pastetoggle=<F4>
 
 " page down with <Space>
 "nmap <space> <pagedown>
@@ -387,8 +390,8 @@ call pathogen#helptags()
 """"""""""
 " Yankring
 """"""""""
-nnoremap <silent> <F3> :YRShow<cr>
-inoremap <silent> <F3> <ESC>:YRShow<cr>
+nnoremap <silent> <F5> :YRShow<cr>
+inoremap <silent> <F5> <ESC>:YRShow<cr>
 
 """""""""
 " matchit
@@ -530,6 +533,21 @@ endfunction
 autocmd BufWritePre *.py call RemoveTrailingWhitespace()
 autocmd BufWritePre *.sh call RemoveTrailingWhitespace()
 
-"Run python script
-map <F2> <Esc>:!python %<CR>
 syn on                      "语法支持
+
+"快速执行脚本,可以添加更多的脚本类型
+function! RunScript()
+    if &ft == "sh"
+        :w|!bash %
+    elseif &ft == "python"
+        :w|!python %
+    elseif &ft == "php"
+        :w|!php %
+    else
+        echo "Unsupport script type: ".&ft.", please add below lines to RunScript()"
+        echo "\telseif &ft == ".&ft
+        echo "\t:w|run_command % \"Please replace run_command as your own need"
+    endif
+endfunction
+"普通模式下使用F2键快速执行bash, python, php脚本，但是目前不支持向脚本参数传递
+nmap <F2> :call RunScript()<CR>
