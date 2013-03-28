@@ -358,7 +358,8 @@ vnoremap < <gv
 vnoremap > >gv
 
 nnoremap gf <c-w>gf " open file in a new tab
-
+map <F8> :NERDTreeToggle<CR>
+map <F6> :TlistToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
@@ -456,6 +457,7 @@ let g:pyflakes_use_quickfix = 0
 let g:flake8_ignore="E501"
 autocmd BufWritePost *.py call Flake8()
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " User defined command
@@ -551,3 +553,8 @@ function! RunScript()
 endfunction
 "普通模式下使用F2键快速执行bash, python, php脚本，但是目前不支持向脚本参数传递
 nmap <F2> :call RunScript()<CR>
+map <F8> :!php -l %<CR>
+
+set runtimepath+=$HOME/.vim/php/
+autocmd BufNewFile,Bufread *.module,*.inc,*.php set keywordprg="help"
+
