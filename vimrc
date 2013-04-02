@@ -58,7 +58,6 @@ set showmode
 set showcmd
 
 set ruler               " Show cursor location
-set number
 
 " I want the text width to be 79, and for it to wrap.
 " These lines manage my line wrapping settings and also show a colored column at
@@ -86,7 +85,6 @@ set scrolloff=3 " Keep some 3 more lines for scope
 
 " Better Search
 " Don't highlight results of a search
-set nohlsearch
 set incsearch
 
 
@@ -187,10 +185,8 @@ set makeef=error.err " When using make, where should it dump the file
 """""""""""""""""""""
 " Vim UI
 """"""""""""""""""""
-set ruler " Always show current positions along the bottom
 "set numberwidth=4 " minimum width to use for the number column,not a fix size Vim64不支持
 set hid " you can change buffer without saving
-set backspace=2 " make backspace work normal
 set whichwrap+=<,>,h,l  " backspace and cursor keys wrap to
 "set mouse=a " use mouse everywhere
 set shortmess=atI " shortens messages to avoid 'press a key' prompt
@@ -553,8 +549,9 @@ function! RunScript()
 endfunction
 "普通模式下使用F2键快速执行bash, python, php脚本，但是目前不支持向脚本参数传递
 nmap <F2> :call RunScript()<CR>
+"php 脚本语法检查
 map <F8> :!php -l %<CR>
-
+"设置使用K查看PHP帮助文档
 set runtimepath+=$HOME/.vim/php/
 autocmd BufNewFile,Bufread *.module,*.inc,*.php set keywordprg="help"
 
