@@ -92,3 +92,5 @@ set nobackup
 "set patchmode=.orig
 "编辑文件时,先将原始文件拷贝一份到filename.orig作为备份
 
+set shiftwidth=4
+"设置每次使用>或<的时候一次平移4个空格
