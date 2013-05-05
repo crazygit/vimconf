@@ -15,6 +15,17 @@
     example:
     git submodule add git://github.com/Lokaltog/vim-powerline.git bundle/vim-powerline
 
+
+## 一些快捷键
+    <F2> 运行脚本
+    <F3> 行号设置
+    <F4> 粘贴设置
+    <F5> YRShow
+    <F6> Tlist
+    <F8> NERDTree
+    <F9> PHP语法检查
+
+
 ## 引用
 
 * <http://blog.arganzheng.me/posts/living-with-vim.html>
