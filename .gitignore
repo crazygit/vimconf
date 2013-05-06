@@ -8,5 +8,4 @@ my_configs.vim
 .netrwhist
 .settings/
 bundle/
-temp_dirs/
-
+temp/

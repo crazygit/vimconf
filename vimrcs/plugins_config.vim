@@ -38,7 +38,7 @@ map <leader>o :BufExplorer<cr>
 """"""""""
 " Yankring
 """"""""""
-let g:yankring_history_dir = '~/.vim/temp_dirs/'
+let g:yankring_history_dir = '~/.vim/temp/'
 nnoremap <silent> <F5> :YRShow<cr>
 inoremap <silent> <F5> <ESC>:YRShow<cr>
 

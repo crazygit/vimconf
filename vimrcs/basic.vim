@@ -315,7 +315,7 @@ autocmd BufEnter *.erb,*.haml,*.htm,*.html,*.kid,*.php,*.rhtml,*.xml,*.xsd setlo
 " "    means that you can undo even when you close a buffer/VIM
 " """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 try
-    set undodir=~/.vim/temp_dirs/undodir
+    set undodir=~/.vim/temp/
     set undofile
 catch
 endtry
