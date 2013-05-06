@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Maintainer:
 "           Crazygit
@@ -22,16 +21,24 @@
 " pathogen
 """""""""""
 " pathogen是Vim用来管理插件的插件
-" Call "filetype off" first to ensure that bundle ftplugins can be added to the
-" path before we re-enable it later in the vimrc.
-:filetype off
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
+""""""""""""""""""""""""""""""
+" => bufExplorer plugin
+""""""""""""""""""""""""""""""""
+let g:bufExplorerDefaultHelp=0
+let g:bufExplorerShowRelativePath=1
+let g:bufExplorerFindActive=1
+let g:bufExplorerSortBy='name'
+map <leader>o :BufExplorer<cr>
+
 """"""""""
 " Yankring
 """"""""""
+let g:yankring_history_dir = '~/.vim/temp_dirs/'
 nnoremap <silent> <F5> :YRShow<cr>
 inoremap <silent> <F5> <ESC>:YRShow<cr>
 
@@ -46,6 +53,13 @@ let b:match_ignorecase = 1
 """"""""""""""""
 let g:explVertical=1 " should I split verticially
 let g:explWinSize=35 " width of 35 pixels
+
+
+"""""""""""""""""""""""""""""""
+" => MRU plugin
+""""""""""""""""""""""""""""""
+let MRU_Max_Entries = 400
+map <leader>f :MRU<CR>
 
 """"""""""""""""""""
 " CTags and Taglist
@@ -99,52 +113,17 @@ let g:flake8_ignore="E501"
 autocmd BufWritePost *.py call Flake8()
 
 
-"""""""""""""""""
-" Autocommands
-"""""""""""""""""
-" ensure every file does syntax highlighting (full)
-autocmd BufEnter * :syntax sync fromstart
-"autocmd GUIEnter * :simalt ~x -- " having it auto maximize the screen
+""""""""""""""""""""""""""""""
+" => ZenCoding
+""""""""""""""""""""""""""""""
+" Enable all functions in all modes
+let g:user_zen_mode='a'
 
-"""""""""""""""""""""""""""""""
-" Auto-Complete:
-" 1. Templates
-" 2. Abbreviations
-"    usage:
-"    iabbrev name payload
-"    cabbrev name othername
-" 3. Insert-mode auto-complete
-""""""""""""""""""""""""""""""""
-" set for template
-function! LoadTemplate()
-	silent! 0r ~/.vim/skel/tmpl.%:e
-	" highlight	%VAR% placeholders with the Todo colour group
-	syn match Todo "%\u\+%" containedIn=ALL
-endfunction
-autocmd! BufNewFile * call LoadTemplate()
-" jump between %VAR% placeholders in Normal mode with <Ctrl-p>
-"nnoremap <c-p> /%\u.\{-1,}%<cr>c/%/e<cr>
-" jump between %VAR% placeholders in Insert mode with <Ctrl-p>
-"inoremap <c-p> <ESC>/%\u.{-1,}%<cr>c/%/e<cr>
 
-" set for abbreviations
-"iab xasp <%@language=jscript%><CR><%<CR><TAB><CR><BS>%><ESC><<O<TAB>
-iab xdate <c-r>=strftime("%Y%m%d %H:%M:%S")<ESC><ESC>
-" abbreviate commands
-" cabbr docs help
-" write a ~/.vim/abbreviations file
-" source ~/.vim/abbreviations
-
-" set for Insert-mode auto-complete
-let g:pydiction_location = "~/.vim/bundle/Pydiction/complete-dict"
-let g:pydiction_menu_height = 20
-
-" PHP
-let g:syntastic_phpcs_conf='--standard=DrupalCodingStandard --extensions=php,module,inc,install,test,profile,theme'
-"let g:syntastic_phpcs_disable=1
-
-" C make
-set makeprg=make\ %<
-set errorformat=%f:%l:\ %m
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>nn :NERDTreeToggle<cr>
+map <leader>nb :NERDTreeFromBookmark
+map <leader>nf :NERDTreeFind<cr>
 

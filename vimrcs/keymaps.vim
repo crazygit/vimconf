@@ -1,4 +1,3 @@
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   Maintainer:
 "           Crazygit
@@ -43,8 +42,12 @@ map <silent> <leader>ee :e ~/.vimrc<cr>
 "定义了一个自动命令，每次写入.vimrc后，都会执行这个自动命令，source一次~/.vimrc文件
 autocmd! BufWritePost .vimrc source ~/.vimrc
 
-" 新建一个tab
-nnoremap <leader>t : tabnew<CR>
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+map <leader>t<leader> :tabnext 
 
 " The escape key is a long ways away. This maps it to the sequence 'jj'
 " 在插入和命令行映射下映射jj为<esc>
@@ -154,8 +157,9 @@ function RemoveTrailingWhitespace()
         call cursor(b:curline, b:curcol)
     endif
 endfunction
-"autocmd BufWritePre * call RemoveTrailingWhitespace()
+
 "写入文件安前，去除bash,python脚本的空白
+"autocmd BufWritePre * call RemoveTrailingWhitespace()
 autocmd BufWritePre *.py call RemoveTrailingWhitespace()
 autocmd BufWritePre *.sh call RemoveTrailingWhitespace()
 
@@ -189,4 +193,9 @@ map Q gq
 
 " "sudo" save:
 command W w !sudo tee % > /dev/null
+
+
+" Spell check
+map <leader>sc :setlocal spell!<cr>
+
 

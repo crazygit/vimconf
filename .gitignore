@@ -1,7 +1,12 @@
+my_configs.vim
 *.swp
 *.pyc
 *.classpath
 .*.swp
 *.project
 .pydevproject
+.netrwhist
 .settings/
+bundle/
+temp_dirs/
+

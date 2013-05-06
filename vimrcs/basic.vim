@@ -238,8 +238,6 @@ set isk+=_,$,@,%,#,-
 set grepprg=ack-grep
 set grepformat=%f:%l%m
 
-" Spell check
-setlocal spell spelllang=en_us
 
 """""""""""""""""""""
 " Vim UI
@@ -292,7 +290,6 @@ set foldlevel=100 " Don't autofold anything (but I can still fold manually)
 set foldopen-=search " don't open folds when you search into them
 set foldopen-=undo " don't open folds when you undo stuff
 
-
 " Turn on modelines
 set modeline            " Scan for modeline commands
 set modelines=4         " Scan 4 lines for modelines
@@ -312,3 +309,64 @@ set ttyfast             " assume a fast terminal connection
 " probably enough.
 "
 autocmd BufEnter *.erb,*.haml,*.htm,*.html,*.kid,*.php,*.rhtml,*.xml,*.xsd setlocal indentexpr= autoindent shiftwidth=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Turn persistent undo on 
+" "    means that you can undo even when you close a buffer/VIM
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+try
+    set undodir=~/.vim/temp_dirs/undodir
+    set undofile
+catch
+endtry
+
+
+"""""""""""""""""
+" Autocommands
+"""""""""""""""""
+" ensure every file does syntax highlighting (full)
+autocmd BufEnter * :syntax sync fromstart
+"autocmd GUIEnter * :simalt ~x -- " having it auto maximize the screen
+
+"""""""""""""""""""""""""""""""
+" Auto-Complete:
+" 1. Templates
+" 2. Abbreviations
+"    usage:
+"    iabbrev name payload
+"    cabbrev name othername
+" 3. Insert-mode auto-complete
+""""""""""""""""""""""""""""""""
+" set for template
+function! LoadTemplate()
+	silent! 0r ~/.vim/skel/tmpl.%:e
+	" highlight	%VAR% placeholders with the Todo colour group
+	syn match Todo "%\u\+%" containedIn=ALL
+endfunction
+autocmd! BufNewFile * call LoadTemplate()
+" jump between %VAR% placeholders in Normal mode with <Ctrl-p>
+"nnoremap <c-p> /%\u.\{-1,}%<cr>c/%/e<cr>
+" jump between %VAR% placeholders in Insert mode with <Ctrl-p>
+"inoremap <c-p> <ESC>/%\u.{-1,}%<cr>c/%/e<cr>
+
+" set for abbreviations
+"iab xasp <%@language=jscript%><CR><%<CR><TAB><CR><BS>%><ESC><<O<TAB>
+" 快速插入时间
+iab xdate <c-r>=strftime("%Y%m%d %H:%M:%S")<ESC><ESC>
+" abbreviate commands
+" cabbr docs help
+" write a ~/.vim/abbreviations file
+" source ~/.vim/abbreviations
+
+" set for Insert-mode auto-complete
+let g:pydiction_location = "~/.vim/bundle/Pydiction/complete-dict"
+let g:pydiction_menu_height = 20
+
+" PHP
+let g:syntastic_phpcs_conf='--standard=DrupalCodingStandard --extensions=php,module,inc,install,test,profile,theme'
+"let g:syntastic_phpcs_disable=1
+
+" C make
+set makeprg=make\ %<
+set errorformat=%f:%l:\ %m
+

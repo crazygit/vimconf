@@ -3,7 +3,7 @@
 
 ## 安装使用
 
-    git clone git://github.com/crazygit/vimrc.git
+    git clone -b newconf git://github.com/crazygit/vimrc.git
     ln -s ~/.vim/vimrc ~/.vimrc
     cd ~/.vim
     git submodule init
@@ -15,6 +15,15 @@
     example:
     git submodule add git://github.com/Lokaltog/vim-powerline.git bundle/vim-powerline
 
+
+## 可以添加自己独有的VIM配置到
+    ~/.vim/my_configs.vim
+
+## 插件
+    * pathogen
+    * bufExplorer
+    * bufExplorer
+    * MRU
 
 ## 一些快捷键
     <F2> 运行脚本
