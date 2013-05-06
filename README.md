@@ -24,6 +24,7 @@
     * bufExplorer
     * bufExplorer
     * MRU
+    * Pydiction 添加自己的模块补齐(bundle/Pydiction/doc/README.txt)
 
 ## 一些快捷键
     <F2> 运行脚本

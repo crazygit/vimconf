@@ -72,11 +72,6 @@ let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
 let Tlist_File_Fold_Auto_Close = 0 " Do not close tags for other files
 let Tlist_Enable_Fold_Column = 0 " Do not show folding tree
 
-" which tags files CTRL-] will search
-set tags=/data/src/tags/cocktail-bp.tags
-" auto change the current dierctory when you open the file or window
-" or any other buffer  Vim64不支持
-"set autochdir
 set makeef=makeerror.err
 
 """""""""""
