@@ -3,7 +3,7 @@
 
 ## 安装使用
 
-    git clone -b newconf git@github.com:crazygit/vimconf.git
+    git clone -b newconf git@github.com:crazygit/vimconf.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
     cd ~/.vim
     git submodule init
