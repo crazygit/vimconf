@@ -1,0 +1,14 @@
+WIKI-NAME
+
+
+%!includeconf: ../config.t2t
+%!postproc: '(?i)(<body)'   '\1 id="fill-title"'
+%!postproc: '(.*)(?i)(</title>)$'    '\1 | fill-title\2'
+%!include: ../menu.t2t
+
+% start body
+<body>
+% end body
+% make two blank lines, don't remove them
+
+%!include: ../footer.t2t
