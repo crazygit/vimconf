@@ -4,8 +4,7 @@
 ## 安装使用
 ```bash
 $ git clone -b master https://github.com/crazygit/vimconf.git ~/.vim
-$ ln -s ~/.vim/vimrc ~/.vimrc
-$ vim +BundleInstall +qall
+$ bash ~/.vim/install.sh
 ```
     
 ## 添加新插件
