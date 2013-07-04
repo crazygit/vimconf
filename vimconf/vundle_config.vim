@@ -23,7 +23,7 @@ Bundle 'mattn/zencoding-vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 
 
