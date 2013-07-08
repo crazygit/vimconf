@@ -39,6 +39,7 @@ Bundle 'python_match.vim'
 Bundle 'taglist.vim'
 Bundle 'VST'
 Bundle 'YankRing.vim'
+Bundle 'winmanager'
 
 
 "===========================

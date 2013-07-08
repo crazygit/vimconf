@@ -28,14 +28,14 @@ let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
 """"""""""
-" Yankring
+" => Yankring
 """"""""""
 let g:yankring_history_dir = '~/.vim/temp'
 nnoremap <silent> <F5> :YRShow<cr>
 inoremap <silent> <F5> <ESC>:YRShow<cr>
 
 """""""""
-" matchit
+" => matchit
 """""""""
 map <tab> %
 let b:match_ignorecase = 1
@@ -54,27 +54,28 @@ let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
 
 """"""""""""""""""""
-" CTags and Taglist
+" => CTags and Taglist
 """"""""""""""""""""
 let Tlist_Ctags_Cmd = "/usr/bin/ctags" " Location of my ctags
 let Tlist_Sort_Type = "name" " order by
 let Tlist_Use_Right_Window = 0 " split to the left side of the screen
 let Tlist_Compart_Format = 1 " show small meny
-let Tlist_Exist_OnlyWindow = 1 " if you are the last, kill yourself
+let Tlist_Exit_OnlyWindow = 1 " if you are the last, kill yourself
 let Tlist_File_Fold_Auto_Close = 0 " Do not close tags for other files
 let Tlist_Enable_Fold_Column = 0 " Do not show folding tree
+let Tlist_Show_One_File = 1 "display the tags for only the current active buffer
 
 set makeef=makeerror.err
 
 """""""""""
-" Minibuf
+" => Minibuf
 """""""""""
 " make tabs show complete (no broken on two lines)
 let g:miniBufExplTabWrap = 1
 let g:miniBufExplModSelTarget = 1
 
 """""""""""""
-" syntastic
+" => syntastic
 """""""""""""
 if has('statusline')
   set laststatus=2
@@ -92,7 +93,7 @@ if has('statusline')
 endif
 
 """""""""""
-" flake8
+" => flake8
 """""""""""
 "写了python文件后，调用flake8检查文件
 let g:pyflakes_use_quickfix = 0
@@ -114,3 +115,8 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => winmanager
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:winManagerWindowLayout='FileExplorer|TagList'
+nmap wm :WMToggle<cr>
