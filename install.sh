@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install requried packages for vim
-sudo apt-get install git-core ctags python-pip
+sudo apt-get install -y git-core ctags python-pip
 sudo pip install flake8
 
 #set vimrc
