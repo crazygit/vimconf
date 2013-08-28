@@ -56,7 +56,12 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""
 " => CTags and Taglist
 """"""""""""""""""""
-let Tlist_Ctags_Cmd = "C:\ctags58\ctags.exe" " Location of my ctags
+if has("win32")
+    let Tlist_Ctags_Cmd = "C:\ctags58\ctags.exe" " Location of my ctags
+else
+    let Tlist_Ctags_Cmd = "/usr/bin/ctags" " Location of my ctags
+endif
+
 let Tlist_Sort_Type = "name" " order by
 let Tlist_Use_Right_Window = 0 " split to the left side of the screen
 let Tlist_Compart_Format = 1 " show small meny

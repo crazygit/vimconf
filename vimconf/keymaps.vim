@@ -160,9 +160,7 @@ endfunction
 
 "写入文件安前，去除bash,python脚本的空白
 "autocmd BufWritePre * call RemoveTrailingWhitespace()
-autocmd BufWritePre *.py call RemoveTrailingWhitespace()
-autocmd BufWritePre *.sh call RemoveTrailingWhitespace()
-
+autocmd BufWritePre *.py,*.sh,*.php,*.html  call RemoveTrailingWhitespace()
 
 "快速执行脚本,可以添加更多的脚本类型
 function! RunScript()
