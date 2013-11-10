@@ -1,26 +1,16 @@
-********************************
-VST（Vim reStructured Text）簡介
-********************************
+My super title
+##############
 
-:Author: LiangLin
-:Version: 1.0
-:License: GNU GPL
-:Date: 2011.08.24
+:date: 2010-10-03 10:20
+:tags: thats, awesome
+:keywords: 
+:category: yeah
+:slug: my-super-post
+:author: crazygit
+:summary: Short version for index and feeds
+:description:
 
-.. title:: VST（Vim reStructured Text）簡介
-
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-.. _Vim: http://vim.sourceforge.net/
-
-使用純文字編輯器也能輸出漂亮、標準的 PDF/HTML/LaTeX 文稿格式嗎？這篇文章就簡單的來探討使用率非常高的 Vim_ 編輯器，在無需深入學習困難的幕後排版指令的前提下，如何做到專業排版輸出的水準，你可以把他當做是一種高水準的簡排系統。
-
-.. contents::
-   :depth: 3
-
-
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-前言
-****
+1. http://docutils.sourceforge.net/docs/user/rst/quickref.html
+2. http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+3. http://www.worldhello.net/gotgithub/appendix/markups.html
+4. 在线编辑器 <http://www.tele3.cz/jbar/rest/rest.html>
