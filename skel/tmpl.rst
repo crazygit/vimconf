@@ -8,6 +8,7 @@ My super title
 :author: crazygit
 :summary: 
 :description:
+:status: draft
 
 1. http://docutils.sourceforge.net/docs/user/rst/quickref.html
 2. http://docutils.sourceforge.net/docs/user/rst/quickstart.html
