@@ -23,6 +23,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'klen/python-mode'
 " Bundle 'Valloric/YouCompleteMe'
 
 
