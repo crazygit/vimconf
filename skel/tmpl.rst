@@ -3,10 +3,9 @@ My super title
 
 :date: 2010-10-03 10:20
 :tags: thats, awesome
-:keywords: 
 :slug: my-super-post
 :author: crazygit
-:summary: 
+:summary:
 :description:
 :status: draft
 
