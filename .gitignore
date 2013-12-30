@@ -8,5 +8,6 @@ my_configs.vim
 .netrwhist
 /.settings/
 /temp/
-/bundle/
+bundle/*
+!bundle/vundle
 

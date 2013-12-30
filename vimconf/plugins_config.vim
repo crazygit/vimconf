@@ -102,7 +102,7 @@ endif
 """""""""""
 "写了python文件后，调用flake8检查文件
 let g:pyflakes_use_quickfix = 0
-let g:flake8_ignore="E501,E124,E126,E127,E128"
+let g:flake8_ignore="E501,E124,E126,E127,E128,E123"
 autocmd BufWritePost *.py call Flake8()
 
 

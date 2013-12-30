@@ -12,6 +12,7 @@ fi
 ln -s ~/.vim/vimrc ~/.vimrc
 
 # install plugins
+git submodule init && git submodule update
 vim +BundleInstall +qall
 
 # update the git remote for myself update the vim repo
