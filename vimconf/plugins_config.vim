@@ -27,6 +27,7 @@ let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
 
+
 """"""""""
 " => Yankring
 """"""""""
@@ -34,11 +35,13 @@ let g:yankring_history_dir = '~/.vim/temp'
 nnoremap <silent> <F5> :YRShow<cr>
 inoremap <silent> <F5> <ESC>:YRShow<cr>
 
+
 """""""""
 " => matchit
 """""""""
 map <tab> %
 let b:match_ignorecase = 1
+
 
 """"""""""""""""
 " File Explorer
@@ -52,6 +55,7 @@ let g:explWinSize=35 " width of 35 pixels
 """"""""""""""""""""""""""""""
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
+
 
 """"""""""""""""""""
 " => CTags and Taglist
@@ -72,12 +76,14 @@ let Tlist_Show_One_File = 1 "display the tags for only the current active buffer
 
 set makeef=makeerror.err
 
+
 """""""""""
 " => Minibuf
 """""""""""
 " make tabs show complete (no broken on two lines)
 let g:miniBufExplTabWrap = 1
 let g:miniBufExplModSelTarget = 1
+
 
 """""""""""""
 " => syntastic
@@ -96,6 +102,7 @@ if has('statusline')
   let g:syntastic_enable_signs=1
   set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
 endif
+
 
 """""""""""
 " => flake8
@@ -120,8 +127,40 @@ map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => winmanager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:winManagerWindowLayout='FileExplorer|TagList'
 nmap wm :WMToggle<cr>
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => python-mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode = 1
+let g:pymode_trim_whitespaces = 1
+let g:pymode_options = 1
+let g:pymode_quickfix_minheight = 3
+let g:pymode_quickfix_maxheight = 6
+let g:pymode_indent = []
+let g:pymode_folding = 1
+let g:pymode_motion = 1
+let g:pymode_doc = 1
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_cmd = ''
+let g:pymode_lint = 1
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_ignore = "E501,W"
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 1
+let g:pymode_rope_completion_bind = '<C-Space>'
+let g:pymode_rope_autoimport = 1
+let g:pymode_rope_autoimport_import_after_complete = 0
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+
