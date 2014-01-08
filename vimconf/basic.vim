@@ -25,11 +25,12 @@ filetype plugin on
 " 支持缩进
 filetype indent on
 
-" 选择夜晚主题
-colorscheme evening
-
 " 设置背景为黑色
 set background=dark
+
+" 选择夜晚主题
+colorscheme solarized
+
 
 " 高显亮,这个要在colorscheme, background之后设置，不然选择的颜色主题就没有用
 syntax on
