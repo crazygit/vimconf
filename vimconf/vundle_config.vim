@@ -42,6 +42,8 @@ Bundle 'taglist.vim'
 Bundle 'VST'
 Bundle 'YankRing.vim'
 Bundle 'winmanager'
+Bundle 'TabBar'
+
 
 
 "===========================
