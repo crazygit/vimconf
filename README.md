@@ -38,3 +38,7 @@ $ bash ~/.vim/install.sh
 * <https://github.com/amix/vimrc>
 
 ## 定期更新vundle插件
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/crazygit/vimconf/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
