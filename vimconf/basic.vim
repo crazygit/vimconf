@@ -29,7 +29,7 @@ filetype indent on
 set background=dark
 
 " 选择夜晚主题
-colorscheme solarized
+colorscheme darkblue
 
 
 " 高显亮,这个要在colorscheme, background之后设置，不然选择的颜色主题就没有用
@@ -78,7 +78,6 @@ set sidescroll=10
 " 当光标处于行首时用 <BS> 键可以回到前一行的结尾;当处于行尾时用 <Space>
 " 键可以移动到下一行的行首.
 set whichwrap=b,s
-
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$
 
 " ’iskeyword’ 选项指定哪些字母可以出现在一个单词中
